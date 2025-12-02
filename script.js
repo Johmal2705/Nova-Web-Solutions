@@ -206,6 +206,10 @@ function initHeroParallax() {
     
     if (!heroImage || !heroImageWrapper) return;
     
+    // Desactivar parallax en dispositivos móviles
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) return;
+    
     let ticking = false;
     
     function updateParallax() {
